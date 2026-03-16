@@ -30,8 +30,14 @@ def main() -> None:
         print("Usage:")
         print("python student_cli.py list")
         print("python student_cli.py search <student_id>")
-        print("python student_cli.py add <name> <id> <email> <grade1> [grade2 ...]")
-        print("python student_cli.py update-grade <id> <grade_index> <new_grade>")
+        print(
+            "python student_cli.py add <name> <id> <email> "
+            "<grade1> [grade2 ...]"
+        )
+        print(
+            "python student_cli.py update-grade <id> "
+            "<grade_index> <new_grade>"
+        )
         print("python student_cli.py add-grade <student_id> <grade>")
         print("python student_cli.py remove-grade <student_id> <grade_index>")
         print("python student_cli.py remove-student <student_id>")
@@ -65,7 +71,8 @@ def main() -> None:
         elif command == "add":
             if len(sys.argv) < 6:
                 print(
-                    "Usage: python student_cli.py add <name> <id> <email> <grade1> [grade2 ...]"
+                    "Usage: python student_cli.py add <name> <id> "
+                    "<email> <grade1> [grade2 ...]"
                 )
                 sys.exit(1)
 
@@ -80,7 +87,8 @@ def main() -> None:
         elif command == "update-grade":
             if len(sys.argv) != 5:
                 print(
-                    "Usage: python student_cli.py update-grade <id> <grade_index> <new_grade>"
+                    "Usage: python student_cli.py update-grade <id> "
+                    "<grade_index> <new_grade>"
                 )
                 sys.exit(1)
 
@@ -94,7 +102,10 @@ def main() -> None:
 
         elif command == "add-grade":
             if len(sys.argv) != 4:
-                print("Usage: python student_cli.py add-grade <student_id> <grade>")
+                print(
+                    "Usage: python student_cli.py add-grade "
+                    "<student_id> <grade>"
+                )
                 sys.exit(1)
 
             add_grade(
@@ -107,7 +118,8 @@ def main() -> None:
         elif command == "remove-grade":
             if len(sys.argv) != 4:
                 print(
-                    "Usage: python student_cli.py remove-grade <student_id> <grade_index>"
+                    "Usage: python student_cli.py remove-grade <student_id> "
+                    "<grade_index>"
                 )
                 sys.exit(1)
 
@@ -120,7 +132,9 @@ def main() -> None:
 
         elif command == "remove-student":
             if len(sys.argv) != 3:
-                print("Usage: python student_cli.py remove-student <student_id>")
+                print(
+                    "Usage: python student_cli.py remove-student <student_id>"
+                )
                 sys.exit(1)
 
             remove_student(sys.argv[2])
