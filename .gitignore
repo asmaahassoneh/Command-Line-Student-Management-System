@@ -24,3 +24,6 @@ Thumbs.db
 
 
 .pytest_cache/
+
+students_export.csv
+students_export.json
