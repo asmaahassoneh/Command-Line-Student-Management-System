@@ -1,0 +1,21 @@
+{
+    "101": {
+        "name": "Asmaa",
+        "email": "asmaa@gmail.com",
+        "grades": [
+            90.0,
+            95.0,
+            88.0,
+            100.0
+        ]
+    },
+    "102": {
+        "name": "Ali",
+        "email": "ali@gmail.com",
+        "grades": [
+            80.0,
+            88.0,
+            92.0
+        ]
+    }
+}
